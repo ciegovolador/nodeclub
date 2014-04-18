@@ -3,7 +3,7 @@
   <div class='panel'>
     <% if (locals.user || locals.current_user) { %>
       <div class='header'>
-        <span class='col_fade'>个人信息<span>
+        <span class='col_fade'>Información Personal<span>
       </div>
       <div class='inner'>
         <%- partial('user/card',{ object: locals.user || locals.current_user, as: 'user' }) %>
@@ -13,11 +13,11 @@
         <p><%= config.description %></p>
         <div>
           您可以
-          <a href='/signin'>登录</a>
+          <a href='/signin'>login</a>
           或
-          <a href='/signup'>注册</a>
+          <a href='/signup'>registro</a>
           , 也可以
-          <a href="/auth/github" class="btn btn-info">通过 GitHub 登录</a>
+          <a href="/auth/github" class="btn btn-info">Entrar con GitHub</a>
         </div>
       </div>
     <% } %>
@@ -27,7 +27,7 @@
     <div class="panel">
       <div class='inner'>
         <a href='/topic/create' id='create_topic_btn'>
-          <button class='btn btn-success'>发布话题</button>
+          <button class='btn btn-success'>Tema nuevo</button>
         </a>
       </div>
     </div>
@@ -36,7 +36,7 @@
   <% if (locals.no_reply_topics) { %>
   <div class='panel'>
     <div class='header'>
-      <span class='col_fade'>无人回复的话题</span>
+      <span class='col_fade'>Temas sin respuesta</span>
     </div>
     <div class='inner'>
       <% if (no_reply_topics.length > 0) { %>
@@ -44,7 +44,7 @@
           <%- partial('topic/small', { collection: no_reply_topics, as: 'topic' }) %>
         </ul>
       <% } else {  %>
-        <p>无</p>
+        <p>Vació</p>
       <% } %>
     </div>
   </div>
@@ -53,7 +53,7 @@
   <% if (locals.tops) { %>
   <div class='panel'>
     <div class='header'>
-      <span class='col_fade'>积分榜</span>
+      <span class='col_fade'>Clasificaciones</span>
       &nbsp;
       <a class='dark' href='/users/top100'>TOP 100 &gt;&gt;</a>
     </div>
@@ -63,7 +63,7 @@
       <%- partial('user/top', { collection: tops, as: 'user' }) %>
       </ol>
       <% } else { %>
-      <p>无</p>
+      <p>Vació</p>
       <% } %>
     </div>
   </div>
@@ -72,8 +72,8 @@
   <% if (locals.stars) { %>
   <div class='panel'>
     <div class='header'>
-      <span class='col_fade'>社区达人</span> &nbsp;
-      <a class='dark' href='/stars'>更多»</a>
+      <span class='col_fade'>Comunidad sobre</span> &nbsp;
+      <a class='dark' href='/stars'>Más »</a>
     </div>
     <div class='inner'>
       <% if (stars.length > 0) { %>
@@ -81,7 +81,7 @@
       <%- partial('user/star', { collection: stars, as: 'user' }) %>
       </ul>
       <% } else { %>
-      <p>无</p>
+      <p>Vació</p>
       <% } %>
     </div>
   </div>
