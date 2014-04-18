@@ -4,11 +4,9 @@ Sistema de comunidades basada en Nodejs
 
 ## Introducción
 
-Node Club 是用 **Node.js** 和 **MongoDB** 开发的新型社区软件，界面优雅，功能丰富，小巧迅速，
-已在Node.js 中文技术社区 [CNode](http://cnodejs.org) 得到应用，但你完全可以用它搭建自己的社区。
 
 
-Nodo Club es una comunidad desarrollada en **Node.js**y **MongoDB**, posee una interfaz elegante, rica en características, es compacto y rápido, se ha usado en [CNode](http://cnodejs.org), la comunidad técnica china de Node.js pero se puede utilizar para construir sus propias comunidades.
+Nodo Club es una comunidad desarrollada en **Node.js** y **MongoDB**, posee una interfaz elegante, rica en características, es compacto y rápido, se ha usado en [CNode](http://cnodejs.org), la comunidad técnica china de Node.js pero se puede utilizar para construir sus propias comunidades.
 
 ## Instalación
 
