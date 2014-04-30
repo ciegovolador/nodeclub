@@ -4,15 +4,15 @@
 	<div class='panel'>
 		<div class='header'>
 			<ul class='breadcrumb'>
-				<li><a href='/'>主页</a><span class='divider'>/</span></li>
-				<li class='active'><%= user.name %> 关注的人</li>
+				<li><a href='/'>Principal</a><span class='divider'>/</span></li>
+				<li class='active'><%= user.name %> Siguiendo</li>
 			</ul>
 		</div>
 		<div class='inner'>
 			<% if (users.length > 0) { %>
 			<%- partial('user/user', { collection: users, as: 'user' }) %>			
 			<% } else { %>
-			<p>没有关注任何人</p>	
+			<p>No sigues a nadies</p>	
 			<% } %>
 		</div>
 	</div>	
