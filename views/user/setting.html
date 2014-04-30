@@ -4,8 +4,8 @@
 	<div class='panel'>
 		<div class='header'>
 			<ul class='breadcrumb'>
-				<li><a href='/'>主页</a><span class='divider'>/</span></li>
-				<li class='active'>设置</li>
+				<li><a href='/'>Principal</a><span class='divider'>/</span></li>
+				<li class='active'>Establecer</li>
 			</ul>
 		</div>
 		<div class='inner'>
@@ -22,20 +22,20 @@
 			<% } %>
 			<form id='setting_form' class='form-horizontal' action='/setting' method='post'>
 				<div class='control-group'>
-					<label class='control-label' for='name'>用户名</label>
+					<label class='control-label' for='name'>nombre de usuario</label>
 					<div class='controls'>
 						<input class='input-xlarge readonly' id='name' name='name' size='30' type='text' readonly='true' value="<%= name %>" />
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='email'>电子邮件</label>
+					<label class='control-label' for='email'>E-mail</label>
 					<div class='controls'>
 						<input class='input-xlarge readonly' id='email' name='email' size='30' type='text' readonly='true' value="<%= email %>" />
-            <p>同时决定了 Gravatar 头像</p>
+            <p>También eligio Gravatar avatar</p>
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='url'>个人网站</label>
+					<label class='control-label' for='url'>Sitio web personal</label>
 					<div class='controls'>
 						<% if(locals.url){ %>
 						<input class='input-xlarge' id='url' name='url' size='30' type='text' value="<%= url %>" />
@@ -45,7 +45,7 @@
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='location'>所在地点</label>
+					<label class='control-label' for='location'>ubicación</label>
 					<div class='controls'>
 						<% if(locals.location){ %>
 						<input class='input-xlarge' id='location' name='location' size='30' type='text' value="<%= location %>" />
@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='signature'>个性签名</label>
+					<label class='control-label' for='signature'>firma</label>
 					<div class='controls'>
 						<% if(locals.signature){ %>
 						<input class='input-xlarge' id='signature' name='signature' size='30' type='text' value="<%= signature %>" />
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='profile'>个人简介</label>
+					<label class='control-label' for='profile'>Perfil</label>
 					<div class='controls'>
 						<% if(locals.profile){ %>
 						<textarea class='input-xlarge' id='profile' name='profile' rows='4'><%= profile %></textarea>
@@ -75,7 +75,7 @@
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='weibo'>微博</label>
+					<label class='control-label' for='weibo'>Microblogging</label>
 					<div class='controls'>
 						<% if(locals.weibo){ %>
 						<input class='input-xlarge' id='weibo' name='weibo' size='30' type='text' value="<%= weibo %>" placeholder="e.g. http://weibo.com/cnodejs" />
@@ -97,7 +97,7 @@
           </div>
         </div>
 				<div class='control-group'>
-					<label class='control-label' for='receive_at_msg'>邮件提醒</label>
+					<label class='control-label' for='receive_at_msg'>alerta de correo electrónico</label>
 					<div class='controls'>
 						<label class='checkbox'>
 							<% if(locals.receive_at_mail){ %>
@@ -105,7 +105,7 @@
 							<% }else{ %>
 							<input type='checkbox' name='receive_at_mail' />
 							<% } %>
-							我被别人@时
+							Notificacion por mail
 						</label>
 						<label class='checkbox'>
 							<% if (locals.receive_reply_mail){ %>
@@ -113,14 +113,14 @@
 							<% }else{ %>
 							<input type='checkbox' name='receive_reply_mail' />
 							<% } %>
-							我的话题收到回复时
+							Respuestas
 						</label>
 					</div>
 				</div>
 				<input type='hidden' id='action' name='action' value='change_setting' />
 				<input type='hidden' name='_csrf' value='<%= csrf %>' />
 				<div class='form-actions'>
-					<input type='submit' class='btn' value='保存设置' />
+					<input type='submit' class='btn' value='Guardar' />
 				</div>
 			</form>
 		</div>
@@ -128,18 +128,18 @@
 
 	<div class='panel'>
 		<div class='header'>
-			<span class='col_fade'>更改密码</span>
+			<span class='col_fade'>Cambiar contraseña</span>
 		</div>
 		<div class='inner'>
 			<form id='change_pass_form' class='form-horizontal' action='/setting' method='post'>
 				<div class='control-group'>
-					<label class='control-label' for='old_pass'>当前密码</label>
+					<label class='control-label' for='old_pass'>Contraseña actual</label>
 					<div class='controls'>
 						<input class='input-xlarge' type='password' id='old_pass' name='old_pass' size='30' />
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='new_pass'>新密码</label>
+					<label class='control-label' for='new_pass'>Nueva contraseña</label>
 					<div class='controls'>
 						<input class='input-xlarge' type='password' id='new_pass' name='new_pass' size='30' />
 					</div>
@@ -147,7 +147,7 @@
 				<input type='hidden' id='action' name='action' value='change_password' />
 				<input type='hidden' name='_csrf' value='<%= csrf %>' />
 				<div class='form-actions'>
-					<input type='submit' class='btn' value='更改密码' />
+					<input type='submit' class='btn' value='Cambiar contraseña' />
 				</div>
 			</form>
 		</div>
