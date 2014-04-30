@@ -8,7 +8,7 @@ var pkg = require('./package.json');
 var config = {
   debug: true,
   name: 'Node Club',
-  description: 'Node Club 是用 Node.js 开发的社区软件',
+  description: 'Node Club es una comunidad de desarrolladores de software utilizando Node.js',
   version: pkg.version,
 
   // site settings
@@ -16,18 +16,18 @@ var config = {
     '<meta name="author" content="EDP@TAOBAO" />',
   ],
   host: 'localhost.cnodejs.org',
-  // 默认的Google tracker ID，自有站点请修改，申请地址：http://www.google.com/analytics/
+  // El valor por defecto Google ID tracker, por favor, modifique su propio sitio, la dirección de aplicación：http://www.google.com/analytics/
   google_tracker_id: 'UA-41753901-5',
   site_logo: '', // default is `name`
-  site_icon: '', // 默认没有 favicon, 这里填写网址
+  site_icon: '', // El valor predeterminado es sin favicon, rellene el URL aquí
   site_navs: [
     // [ path, title, [target=''] ]
-    [ '/about', '关于' ],
+    [ '/about', 'Acerca de' ],
   ],
-  site_static_host: '', // 静态文件存储域名
-  mini_assets: false, // 静态文件的合并压缩，详见视图中的Loader
-  site_enable_search_preview: false, // 开启google search preview
-  site_google_search_domain:  'cnodejs.org',  // google search preview中要搜索的域名
+  site_static_host: '', // Dominio de almacenamiento de archivos estáticos
+  mini_assets: false, // Compresión de archivos estáticos combinados, vista detallada del cargador
+  site_enable_search_preview: false, // abierto google search preview
+  site_google_search_domain:  'cnodejs.org',  // google search preview Nombre de dominio que desea buscar
 
   upload_dir: path.join(__dirname, 'public', 'user_data', 'images'),
 
@@ -36,18 +36,18 @@ var config = {
   auth_cookie_name: 'node_club',
   port: 3000,
 
-  // 话题列表显示的话题数量
+  // Lista de temas, cantidad
   list_topic_count: 20,
 
-  // 限制发帖时间间隔，单位：毫秒
+  // Restringir el intervalo de publicar, unidad: ms
   post_interval: 10000,
 
   // RSS
   rss: {
-    title: 'CNode：Node.js专业中文社区',
+    title: 'Comunidad',
     link: 'http://cnodejs.org',
     language: 'zh-cn',
-    description: 'CNode：Node.js专业中文社区',
+    description: 'Comunidad',
 
     //最多获取的RSS Item数量
     max_rss_items: 50
@@ -105,7 +105,7 @@ var config = {
   //weibo app key
   weibo_key: 10000000,
 
-  // admin 可删除话题，编辑标签，设某人为达人
+  // admin Puede eliminar el tema, editar las etiquetas, elegir roles configurar
   admins: { admin: true },
 
   // [ { name: 'plugin_name', options: { ... }, ... ]
