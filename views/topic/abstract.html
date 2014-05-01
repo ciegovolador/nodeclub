@@ -7,11 +7,11 @@
   </a>
 
   <span class="reply_count pull-left">
-    <span class="count_of_replies" title="回复数">
+    <span class="count_of_replies" title="Respuestas">
       <%= topic.reply_count %>
     </span>
     <span class="count_seperator">/</span>
-    <span class="count_of_visits" title='点击数'>
+    <span class="count_of_visits" title='Impactos'>
       <%= topic.visit_count %>
     </span>
   </span>
@@ -32,7 +32,7 @@
   <div class="topic_title_wrapper">
     <a class='topic_title' href='/topic/<%= topic._id %>'>
       <% if (topic.top) { %>
-        <span class='put_top'>置顶</span>
+        <span class='put_top'>Top</span>
       <% } %>
       <%= topic.title %>
     </a>
