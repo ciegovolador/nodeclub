@@ -4,29 +4,29 @@
 <div id='content'>
   <div class='panel'>
     <div class='header'>
-      <span class='col_fade'>所有标签</span>
+      <span class='col_fade'>Todas las etiquetas</span>
     </div>
     <div class='inner'>
       <% if(locals.tags && tags.length > 0 ){ %>
       <table class='table'>
         <thead>
-          <th>序号</th>
-          <th>名字</th>
-          <th>编辑</th>
-          <th>删除</th>
+          <th>No.</th>
+          <th>Nombre</th>
+          <th>Editor</th>
+          <th>Borrar</th>
         </thead>
         <tbody>
           <%- partial('tag/tag_can_edit',{collection:tags,as:'tag'}) %>
         </tbody>
       </table>
       <% }else{ %>
-      <p>无标签</p>
+      <p>Sin clasificar</p>
       <% } %>
     </div>
   </div>
   <div class='panel'>
     <div class='header'>
-      <span class='col_fade'>添加标签</span>
+      <span class='col_fade'>Añadir etiquetas</span>
     </div>
     <div class='inner'>
       <% if(locals.edit_error){ %>
@@ -38,14 +38,14 @@
       <form id='add_tag_form' class='form-horizontal' action='/tag/add' method='post'>
         <legend></legend>
         <div class='control-group'>
-          <label class='control-label' for='name'>名字</label>
+          <label class='control-label' for='name'>Nombre</label>
           <div class='controls'>
             <input class='input-xlarge' id='name' name='name' size='30' type='text' />
-            <p class='help-block'>须为汉字和字母和数字组合</p>
+            <p class='help-block'>Debe ser una combinación de letras y números y caracteres</p>
           </div>
         </div>
         <div class='control-group'>
-          <label class='control-label' for='order'>序号</label>
+          <label class='control-label' for='order'>No.</label>
           <div class='controls'>
             <select class='span2' name='order'>
               <% if(locals.tags && tags.length >= 0 ){ %>
@@ -58,26 +58,26 @@
               <% } %>
               <% } %>
             </select>
-            <p class='help-block'>首页标签按此序号由小到大排序</p>
+            <p class='help-block'>Haga clic en el número de la ficha Inicio ascendente Ordenar</p>
           </div>
         </div>
         <div class='control-group'>
-          <label class='control-label' for='background'>背景图片</label>
+          <label class='control-label' for='background'>Imagen de fondo</label>
           <div class='controls'>
             <input class='input-xlarge' id='background' name='background' size='20'
             type='text' />
-            <p class='help-block'>标签首页背景图片<p>
+            <p class='help-block'>Fondo de la etiqueta Inicio片<p>
           </div>
         </div>
         <div class='control-group'>
-          <label class='control-label' for='description'>描述</label>
+          <label class='control-label' for='description'>Descripción</label>
           <div class='controls'>
             <textarea class='input-xlarge' id='description' name='description' rows='4'></textarea>
           </div>
         </div>
         <input type='hidden' name='_csrf' value='<%= csrf %>' />
         <div class='form-actions'>
-          <input type='submit' class='btn' value='添加' />
+          <input type='submit' class='btn' value='Añadir' />
         </div>
       </form>
     </div>
@@ -89,7 +89,7 @@
 <script type='text/javascript'>
   $(document).ready(function(){
     $('.delete_tag_btn').click(function(){
-      if(confirm('确定要删除此标签吗？')){
+      if(confirm('¿Estás seguro de que desea eliminar esta etiqueta？')){
         window.location.href = $(this).attr('href');
       }
       return false;
