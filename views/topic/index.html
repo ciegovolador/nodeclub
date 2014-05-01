@@ -33,7 +33,7 @@
       <%- partial('topic/small', { collection: no_reply_topics, as: 'topic' }) %>
       </ul>
       <% } else {  %>
-      <p>无</p>
+      <p>Vacío</p>
       <% } %>
     </div>
   </div>
@@ -44,13 +44,13 @@
     <div class='header'>
       <span class="topic_full_title">
         <% if (topic.top) { %>
-          <span class='put_top'>置顶</span>
+          <span class='put_top'>Superior</span>
         <% } %>
         <%= topic.title %>
       </span>
       <div class="changes">
         <div>
-          发布于 <%= topic.friendly_create_at %>
+          Publicado el <%= topic.friendly_create_at %>
         </div>
         <% if (topic.friendly_create_at != topic.friendly_update_at) { %>
           <div>
@@ -109,8 +109,8 @@
     
       <div class="action">
         <button class='btn btn-success' id='share_weibo_btn'
-          onclick="((function(s,d,e,r,l,p,t,z,c){var f='http://v.t.sina.com.cn/share/share.php?appkey=<%= config.weibo_key %>',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&source=',e(r),'&sourceUrl=',e(l),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent,'','','','分享来自<%= config.name %>的话题：<%= topic.title %>','',''));"
-          >分享到微博</button>
+          onclick="((function(s,d,e,r,l,p,t,z,c){var f='http://v.t.sina.com.cn/share/share.php?appkey=<%= config.weibo_key %>',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&source=',e(r),'&sourceUrl=',e(l),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent,'','','','Compartir desde<%= config.name %>Tema：<%= topic.title %>','',''));"
+          >Compartir en Twitter</button>
         <% if (locals.current_user) { %>
           <% if (!topic.in_collection) { %>
           <button class='btn btn-success' id='collect_btn' action='collect'>Añadir a Favoritos</button>
@@ -211,10 +211,10 @@
       $.post('/topic/' + action, data, function(data) {
         if (data.status === 'success') {
           if (action == 'collect') {
-            $me.html('取消收藏');
+            $me.html('Cancelar');
             $me.attr('action','de_collect');
           } else {
-            $me.html('加入收藏');
+            $me.html('Añadir a Favoritos');
             $me.attr('action','collect');
           }
           $me.toggleClass('btn-success');
@@ -224,7 +224,7 @@
 
     $('.delete_reply_btn, .delete_reply2_btn').live('click', function() {
       var $me = $(this);
-      if (confirm('确定要删除此回复吗？')) {
+      if (confirm('¿Estás seguro de que desea eliminar esta respuesta？')) {
         var reply_id = null;
         if ($me.hasClass('delete_reply_btn')) {
           reply_id = $me.parents('.reply_item').attr('reply_id');
