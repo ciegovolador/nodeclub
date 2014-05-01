@@ -4,7 +4,7 @@
 <div id='content'>
   <div class='panel'>
     <div class='header'>
-      <span class='col_fade'>编辑标签</span>
+      <span class='col_fade'>Editar etiquetas</span>
     </div>
     <div class='inner'>
       <% if(locals.edit_error){ %>
@@ -19,11 +19,11 @@
           <label class='control-label' for='name'>名字</label>
           <div class='controls'>
             <input class='input-xlarge' id='name' name='name' size='30' type='text' value='<%= tag.name %>'/>
-            <p class='help-block'>须为汉字和字母和数字组合</p>
+            <p class='help-block'>Debe ser una combinación de letras y números y caracteres</p>
           </div>
         </div>
         <div class='control-group'>
-          <label class='control-label' for='order'>序号</label>
+          <label class='control-label' for='order'>No.</label>
           <div class='controls'>
             <select class='span2' name='order'>
               <% if(locals.tags && tags.length > 0 ){ %>
@@ -36,26 +36,26 @@
               <% } %>
               <% } %>
             </select>
-            <p class='help-block'>首页标签按此序号由小到大排序</p>
+            <p class='help-block'>Haga clic en el número de la ficha Inicio ascendente Ordenar</p>
           </div>
         </div>
         <div class='control-group'>
-          <label class='control-label' for='background'>背景图片</label>
+          <label class='control-label' for='background'>Imagen de fondo</label>
           <div class='controls'>
             <input class='input-xlarge' id='background' name='background' size='20'
             type='text' value='<%= tag.background %>' />
-            <p class='help-block'>标签首页背景图片<p>
+            <p class='help-block'>Imagen de fondo de etiquetas Inicio<p>
           </div>
         </div>
         <div class='control-group'>
-          <label class='control-label' for='description'>描述</label>
+          <label class='control-label' for='description'>Descripción</label>
           <div class='controls'>
             <textarea class='input-xlarge' id='description' name='description' rows='4'><%= tag.description %></textarea>
           </div>
         </div>
         <input type='hidden' name='_csrf' value='<%= csrf %>' />
         <div class='form-actions'>
-          <input type='submit' class='btn' value='保存' />
+          <input type='submit' class='btn' value='Guardar' />
         </div>
       </form>
     </div>
