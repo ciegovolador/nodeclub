@@ -13,23 +13,23 @@
 	<% if(message.type == 'reply2'){ %>
 		<span>
 			<a href="/user/<%= message.author.name %>" target='_blank'><%= message.author.name %></a> 
-			在话题 
+			En el tema 
 			<a href="/topic/<%= message.topic._id + (message.reply ? '#' + message.reply._id : '') %>" target='_blank'><%= message.topic.title %></a>
-			中回复了你的回复
+			En respuesta a su respuesta
 		</span>
 	<% } %>
 	<% if(message.type == 'follow'){ %>
 	<span>
 		<a href="/user/<%= message.author.name %>" target='_blank'><%= message.author.name %></a> 
-		关注了你 
+		La preocupación que 
 	</span>
 	<% } %>
 	<% if (message.type == 'at'){ %>
 		<span>
 			<a href="/user/<%= message.author.name %>" target='_blank'><%= message.author.name %></a>
-			在话题
+			En el tema
 			<a href="/topic/<%= message.topic._id + (message.reply ? '#' + message.reply._id : '') %>" target='_blank'><%= message.topic.title %></a>
-			中@了你
+			El @ te
 		</span>
 	<% } %>
 
@@ -39,7 +39,7 @@
 	<span class="marked_icon mark_read_btn">
 		<img class='unread'
 		  src='<%- config.site_static_host %>/public/images/checkmark_icon&16.png'
-		  title='消息已读'
+		  title='El mensaje ha sido leído'
 		/>
 	</span>
 	<% } %>
