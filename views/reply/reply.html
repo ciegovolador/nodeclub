@@ -14,15 +14,15 @@
         (locals.current_user && current_user._id.toString() == reply.author._id.toString())
         ) { %>
         <a href='/reply/<%- reply._id %>/edit' class='edit_reply_btn'>
-          <img class='user_icon' src="<%- config.site_static_host %>/public/images/doc_edit_icon&16.png" title='编辑' />
+          <img class='user_icon' src="<%- config.site_static_host %>/public/images/doc_edit_icon&16.png" title='Editor' />
         </a>
         <a href='javascript:void(0);' class='delete_reply_btn'>
-          <img class='user_icon' src="<%- config.site_static_host %>/public/images/trash_icon&16.png" title='删除' />
+          <img class='user_icon' src="<%- config.site_static_host %>/public/images/trash_icon&16.png" title='Borrar' />
         </a>
       <% } %>
       <span>
         <% if(locals.current_user){ %>
-          <img class='dark reply2_btn' src="<%- config.site_static_host %>/public/images/reply_icon_16.png" title="回复">
+          <img class='dark reply2_btn' src="<%- config.site_static_host %>/public/images/reply_icon_16.png" title="Responder">
         <% } %>
         <!--<% if(reply.replies.length>0){ %>
          <span class='col_fade'>{<%= reply.replies.length %>}</span>
@@ -48,17 +48,17 @@
             <textarea class='span8 editor reply_editor'
               id="reply2_editor_<%- reply._id %>" name='r2_content' rows='4'></textarea>
             <div class='editor_buttons'>
-              <button class='btn action_preview'>预览</button>
+              <button class='btn action_preview'>Vista previa</button>
               <button class='btn reply2_submit_btn'
-                type="submit" data-id='<%= reply._id %>'>回复</button>
+                type="submit" data-id='<%= reply._id %>'>Responder</button>
             </div>
           </div>
           <div class='markdown_in_preview'>
             <div class='preview'></div>
             <div class='editor_buttons'>
               <button class='btn reply2_submit_btn'
-                type="submit" data-id='<%= reply._id %>'>回复</button>
-              <button class='btn action_modify'>修改</button>
+                type="submit" data-id='<%= reply._id %>'>Responder</button>
+              <button class='btn action_modify'>Modificar</button>
             </div>
           </div>
         </div>
