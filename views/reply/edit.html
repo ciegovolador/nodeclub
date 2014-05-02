@@ -4,8 +4,8 @@
   <div class='panel'>
     <div class='header'>
       <ol class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
-        <li class='active'>编辑回复</li>
+        <li><a href='/'>Principal</a><span class='divider'>/</span></li>
+        <li class='active'>Editar mensaje</li>
       </ol>
     </div>
     <div class='inner post'>
@@ -25,19 +25,19 @@
           <div class='markdown_editor in_editor'>
             <div class='markdown_in_editor'>
               <textarea class='editor' name='t_content' rows='20'
-                placeholder='用 Markdown 输入回复的内容'
+                placeholder='Puede responder usando Markdown'
                 autofocus
                 ><%= locals.content || '' %></textarea>
               <div class='editor_buttons'>
-                <button class='btn action_preview'>预览</button>
-                <button id='submit_btn' type="submit" class='btn'>发布</button>
+                <button class='btn action_preview'>Vista previa</button>
+                <button id='submit_btn' type="submit" class='btn'>Responder</button>
               </div>
             </div>
             <div class='markdown_in_preview'>
               <div class='preview'></div>
               <div class='editor_buttons'>
-                <button id='submit_btn' type="submit" class='btn'>发布</button>
-                <button class='btn action_modify'>修改</button>
+                <button id='submit_btn' type="submit" class='btn'>Responder</button>
+                <button class='btn action_modify'>Modificar</button>
               </div>
             </div>
           </div>
