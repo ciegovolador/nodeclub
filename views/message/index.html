@@ -4,30 +4,30 @@
 	<div class='panel'>
 		<div class='header'>
 			<ul class='breadcrumb'>
-				<li><a href='/'>主页</a><span class='divider'>/</span></li>
-				<li class='active'>新消息</li>
+				<li><a href='/'>Principal</a><span class='divider'>/</span></li>
+				<li class='active'>NOTICIAS</li>
 			</ul>
 		</div>
 		<% if (locals.hasnot_read_messages && hasnot_read_messages.length > 0) { %>
 		<%- partial('message/message', { collection: hasnot_read_messages, as: 'message' }) %>
 		<div class='cell'>
-			<button id='mark_all_messages_btn' class='btn'>标记所有消息为已读</button>
+			<button id='mark_all_messages_btn' class='btn'>Marcar todos los mensajes como leídos</button>
 		</div>
 		<% } else { %>
 		<div class='inner'>
-			<p>无消息</p>
+			<p>Ningún mensaje</p>
 		</div>
 		<% } %>
 	</div>
 	<div class='panel'>
 		<div class='header'>
-			<span class='col_fade'>过往信息</span>
+			<span class='col_fade'>Histórial</span>
 		</div>
 		<% if (locals.has_read_messages && has_read_messages.length > 0) { %>
 		<%- partial('message/message', { collection: has_read_messages, as: 'message' }) %>
 		<% } else { %>
 		<div class='inner'>
-			<p>无消息</p>
+			<p>Ningún mensaje</p>
 		</div>
 		<% } %>
 	</div>
