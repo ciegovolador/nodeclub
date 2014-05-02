@@ -6,7 +6,7 @@
 	<% if(message.type == 'reply'){ %>
 		<span>
 			<a href="/user/<%= message.author.name %>" target='_blank'><%= message.author.name %></a> 
-			回复了你的话题 
+			Responder al tema 
 			<a href="/topic/<%- message.topic._id + (message.reply ? '#' + message.reply._id : '') %>" target='_blank'><%= message.topic.title %></a>
 		</span>
 	<% } %>
@@ -34,7 +34,7 @@
 	<% } %>
 
 	<% if (message.has_read) { %>
-	<span class="marked_icon"><img src='<%- config.site_static_host %>/public/images/checkmark_icon&16.png' title='消息已读'/></span>
+	<span class="marked_icon"><img src='<%- config.site_static_host %>/public/images/checkmark_icon&16.png' title='El mensaje ha sido leído'/></span>
 	<% } else { %>
 	<span class="marked_icon mark_read_btn">
 		<img class='unread'
